@@ -120,20 +120,18 @@ npm install @prisma/client @auth/prisma-adapter
 npm install prisma --save-dev
 ```
 
-
-yarn fixes Deepseek (mckeen.it)
-stop here, not yarn dev yet.
-
-
 # bcrypt
 ```shell
-(window/WSL)
-yarn add bcrypt
+(window/WSL-js provides its own types defn)
+yarn add bcryptjs
 (linux)
 npm install bcrypt
+npm install -D @types/bcrypt
 ```
 
 
+yarn fixes Deepseek (mckeen.it)
+1:53:40
 
 # Deployment to Vercel
 ```shell
