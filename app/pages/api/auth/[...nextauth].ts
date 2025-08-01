@@ -3,6 +3,7 @@ import { AuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
+import bcryptjs from 'bcryptjs';
 
 import prisma from "@/app/libs/prismadb";
 import { adapter } from "next/dist/server/web/adapter";
@@ -19,7 +20,7 @@ export const authOptions: AuthOptions = {
       clientId: process.env.GITHUB_ID as string,
       clientSecret: process.env.GITHUB_SECRET as string,
     }),
-    CredentialsProvier({
+    CredentialsProvider({
       name: 'credentials',
       credentials: { 
         email: { label: 'email', type: 'text' },
@@ -37,7 +38,21 @@ export const authOptions: AuthOptions = {
         if ( !user || !user?.hashedPassword) {
           throw new Error('Invalid credentials');
         }
+
+        const isCorrectPassword = await bcryptjs.compare(
+          credentials.password,
+          user.hashedPassword
+        );
+
+        if (!isCorrectPassword) {
+          throw new Error('Invalid credentials');
+        }
+
+        return user;
       }
     })
-  ]
+  ],
+  pages: {
+    signIn: '/',
+  },
 }
