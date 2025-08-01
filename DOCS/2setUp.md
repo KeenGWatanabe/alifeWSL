@@ -80,7 +80,7 @@ npm install react-hot-toast
 ```
 
 # prisma
-```shell
+```shell (window/WSL)
 yarn add @prisma/client @auth/prisma-adapter
 
 yarn add -D prisma
@@ -114,6 +114,8 @@ src: https://authjs.dev/getting-started/adapters/prisma
 ```shell
 (window/WSL)
 yarn add @prisma/client @auth/prisma-adapter
+
+yarn add next-auth@^4
 
 (debian)
 npm install @prisma/client @auth/prisma-adapter
