@@ -1,13 +1,11 @@
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import { AuthOptions } from "next-auth";
+import NextAuth, { AuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcryptjs from 'bcryptjs';
 
 import prisma from "@/app/libs/prismadb";
-import { adapter } from "next/dist/server/web/adapter";
-import { VscGithubProject } from "react-icons/vsc";
 
 export const authOptions: AuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -55,4 +53,11 @@ export const authOptions: AuthOptions = {
   pages: {
     signIn: '/',
   },
-}
+  debug: process.env.NODE_ENV === 'development',
+  session: {
+    strategy: "jwt"
+  },
+  secret: process.env.NEXTAUTH_SECRET,
+};
+
+export default NextAuth(authOptions);
