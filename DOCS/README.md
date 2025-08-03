@@ -1,3 +1,12 @@
+# alifeWSL | wsl | yarn 
+Accessing the project follow below steps"
+at Ubuntu terminal:
+![UbuntuLTSterminal](/DOCS/PICS/UbuntuLTSterminal.png)
+cd into project directory, and type `code .`
+![cdCode](/DOCS/PICS/cdCode.png)
+
+[WSLsetup.md](/DOCS/2setUp.md)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

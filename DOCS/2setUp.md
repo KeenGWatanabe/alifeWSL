@@ -1,9 +1,15 @@
-Yarn : Linux, WSL, Shell
+# alifeWSL | wsl | yarn 
+
+Yarn : Linux, WSL
 Accessing the project follow below steps"
 at Ubuntu terminal:
 ![UbuntuLTSterminal](/DOCS/PICS/UbuntuLTSterminal.png)
 cd into project directory, and type `code .`
 ![cdCode](/DOCS/PICS/cdCode.png)
+
+loc: /home/rger/nextjs/alifeWSL
+terminal: ubuntu-wsl
+github: https://github.com/KeenGWatanabe/alifeWSL
 
 
 # initialize project
