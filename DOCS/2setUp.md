@@ -65,25 +65,6 @@ body,
 ```shell (window/WSL)
 yarn add react-icons zustand axios react-hook-form react-hot-toast
 ```
-```bash (debian)
-npm install react-icons
-```
-# zustand
-```bash (debian)
-npm install zustand
-```
-# axios
-```bash (debian)
-npm install axios
-```
-# react-hook-form
-```bash (debian)
-npm install react-hook-form
-```
-# react-hot-toast
-```bash (debian)
-npm install react-hot-toast
-```
 
 # prisma
 ```shell (window/WSL)
@@ -136,7 +117,7 @@ yarn add bcryptjs
 npm install bcrypt
 npm install -D @types/bcrypt
 ```
-
+![mongoUserAPI](/DOCS/PICS/2:09:09mongoUser.png)
 
 yarn fixes Deepseek (mckeen.it)
 2:05:10
