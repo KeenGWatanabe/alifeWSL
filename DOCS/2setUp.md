@@ -120,7 +120,7 @@ npm install -D @types/bcrypt
 ![mongoUserAPI](/DOCS/PICS/2:09:09mongoUser.png)
 
 yarn fixes Deepseek (mckeen.it)
-2:05:10
+2:09:10
 
 # Deployment to Vercel
 ```shell

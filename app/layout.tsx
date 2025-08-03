@@ -4,7 +4,8 @@ import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import RegisterModal from "./components/modals/RegisterModal";
 import ToasterProvider from "./providers/ToasterProvider";
-import { Toaster } from "react-hot-toast";
+// import { Toaster } from "react-hot-toast";
+import LoginModal from "./components/modals/LoginModal";
 
 <link rel="icon" href="./favicon.ico" sizes="any" />
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ToasterProvider />
+        <LoginModal />
         <RegisterModal />
         <Navbar />
          {children}
