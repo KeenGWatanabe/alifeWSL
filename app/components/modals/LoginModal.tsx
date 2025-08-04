@@ -1,5 +1,6 @@
 'use client';
 
+import { signIn } from 'next-auth/react'
 import axios from 'axios';
 import { AiFillGithub } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
@@ -18,8 +19,11 @@ import Heading from '../Heading';
 import Input from '../inputs/Input';
 import toast from 'react-hot-toast';
 import Button from '../Button';
+import { routerServerGlobal } from 'next/dist/server/lib/router-utils/router-server-context';
+import { useRouter } from 'next/navigation';
 
 const LoginModal = () => {
+  const router = useRouter();
   const registerModal = useRegisterModal();
   const LoginModal = useLoginModal();
   const [isLoading, setIsLoading] = useState(false);
@@ -30,7 +34,6 @@ const LoginModal = () => {
     formState: { errors } //check errors if click submit blank
   } = useForm<FieldValues>({
     defaultValues: {
-      name: '',
       email: '',
       password: ''
     }
@@ -38,36 +41,35 @@ const LoginModal = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
       setIsLoading(true);
-      axios
-        .post('/api/register', data)
-        .then(() => {
-          registerModal.onClose();
-        })
-        .catch((error) => {
-          toast.error("Something went wrong!");
-        })
-        .finally(() => {
-          setIsLoading(false);
-        });
+      
+      signIn('credentials', {
+        ...data,
+        redirect: false,
+      })
+      .then((callback) => {
+        setIsLoading(false);
+
+        if(callback?.ok) {
+          toast.success('Logged in');
+          router.refresh();
+          LoginModal.onClose();
+        }
+
+        if (callback?.error) {
+          toast.error(callback.error);
+        }
+      })
     }
 
     const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading 
-        title="Welcome to Tonboswimmers"
-        subtitle="Create an account!"      
+        title="Welcome back"
+        subtitle="Login to your account!"      
       />
       <Input 
         id="email"
         label="Email"
-        disabled={isLoading}
-        register={register}
-        errors={errors}
-        required
-      />
-      <Input 
-        id="name"
-        label="Name"
         disabled={isLoading}
         register={register}
         errors={errors}
@@ -133,7 +135,7 @@ const LoginModal = () => {
     <Modal
       disabled={isLoading}
       isOpen={LoginModal.isOpen}
-      title="Register"
+      title="Login"
       actionLabel="Continue"
       onClose={LoginModal.onClose}
       onSummit={handleSubmit(onSubmit)}
