@@ -8,7 +8,8 @@
   ],
   "build": {
     "env": {
-      "DATABASE_URL": "mongodb+srv://mckeenit:SWSYZ2op11lmcWqg@cluster0.80uvbfh.mongodb.net/alifeWSL"
+      "DATABASE_URL": "mongodb+srv://mckeenit:SWSYZ2op11lmcWqg@cluster0.80uvbfh.mongodb.net/alifeWSL",
+      "NEXTAUTH_SECRET": "6uiGCn+d6h9exmWMs745/DJJkxgvZXZJOkGEKExY+QU="
     }
   }
 }
