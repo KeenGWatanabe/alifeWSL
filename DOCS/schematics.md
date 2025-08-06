@@ -3,6 +3,8 @@
 Based on the repository at https://github.com/KeenGWatanabe/alifeWSL, here's a schematic overview of the database schema and application structure to help with troubleshooting and refactoring.
 
 ## Database Schema
+PK: primary key
+FK: foreign key
 
 ```
 ┌───────────────────────┐
