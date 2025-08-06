@@ -119,8 +119,18 @@ npm install -D @types/bcrypt
 ```
 ![mongoUserAPI](/DOCS/PICS/2:09:09mongoUser.png)
 
+
+# github auth
+github settings > Developer settings > 
+OAuth Apps > New OAuth App > 
+Homepage URL* http://localhost:3000/
+Authorization callback URL * http://localhost:3000/
+
+copy Client ID and Client secret into .env
+
+
 yarn fixes Deepseek (mckeen.it)
-2:32:50
+2:34:48
 
 # Deployment to Vercel
 ```shell
