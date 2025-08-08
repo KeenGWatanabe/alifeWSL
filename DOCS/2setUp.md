@@ -128,6 +128,27 @@ Authorization callback URL * http://localhost:3000/
 
 copy Client ID and Client secret into .env
 
+# google auth
+goto https://console.cloud.google.com
+[do not click activate account-use free trial]
+Project > New Project > project name: "alifeWSL" > No organisation > create
+> SELECT PROJECT > APIs and services >
+OAuth consent screen > 
+1. App Information
+2. Audience: External
+3. Contact Information: mck.it
+4. Finish: agree
+> Create
+
+Clients > Create OAuth client ID > 
+Application type * : Web Application;
+Authorized redirect URIs: 
+http://localhost:3000/api/auth/callback/google
+> Create
+
+copy google_client_id and google_client_secret to .env
+
+> Create
 
 yarn fixes Deepseek (mckeen.it)
 2:34:48
