@@ -53,9 +53,9 @@ Vercel only needs the **repository URL** (`https://github.com/user/repo`), not t
 
 ### ⚡ **Automatic Behavior**
 - Pushing to `dev` → Deploys to `dev-app.vercel.app`  
-- Merging to `main` → Deploys to `app.com`  
+- Merging to `main` → Deploys to `main-app.vercel.app` / `app.com` 
 - Every PR gets its own preview URL  
-
+Update github URL and google cloud uri
 ---
 
 ### 📝 **Key Notes**
