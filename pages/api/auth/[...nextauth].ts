@@ -17,6 +17,11 @@ export const authOptions: AuthOptions = {
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
       clientSecret: process.env.GITHUB_SECRET as string,
+      authorization: {
+        params: {
+          redirect_uri: process.env.NEXTAUTH_URL ? `${process.env.NEXTAUTH_URL}/api/auth/callback/github` : "http://localhost:3000/api/auth/callback/github"
+        }
+      }
     }),
     CredentialsProvider({
       name: 'credentials',
