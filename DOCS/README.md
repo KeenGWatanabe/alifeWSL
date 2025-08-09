@@ -35,6 +35,37 @@ Create **three separate Vercel projects** linked to the same repo:
 | Staging       | staging    | staging.app.com   | Set in Vercel UI      |
 | Development   | dev        | dev.vercel.app    | Set in Vercel UI      |
 
+Yes! Vercel can deploy from **any Git branch**, not just the `main` branch. Here's exactly how to configure it:
+
+### 🔗 **URL Structure Doesn't Matter**
+Vercel only needs the **repository URL** (`https://github.com/user/repo`), not the branch-specific URL (`/tree/dev`). The branch is configured separately.
+
+---
+
+### 🛠️ **How to Set Up Multiple Environments**
+| Branch      | Vercel Project Type | Domain Example         |
+|-------------|---------------------|------------------------|
+| `main`      | Production          | `app.com`              |
+| `dev`       | Preview             | `dev-app.vercel.app`   |
+| `feature/*` | Preview             | Unique URL per PR      |
+
+---
+
+### ⚡ **Automatic Behavior**
+- Pushing to `dev` → Deploys to `dev-app.vercel.app`  
+- Merging to `main` → Deploys to `app.com`  
+- Every PR gets its own preview URL  
+
+---
+
+### 📝 **Key Notes**
+1. **No need for branch URLs** in repo connection  
+2. **All branches are deployable** once repo is connected  
+3. **Preview deployments** are created automatically for non-main branches  
+
+---
+
+
 ### b. Environment Variable Examples
 
 **In Vercel Dashboard** (for each project):
