@@ -25,6 +25,50 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### a. Recommended Vercel Project Setup
+
+Create **three separate Vercel projects** linked to the same repo:
+
+| Project       | Git Branch | Domain            | Environment Variables |
+|---------------|------------|-------------------|-----------------------|
+| Production    | main       | app.com           | Set in Vercel UI      |
+| Staging       | staging    | staging.app.com   | Set in Vercel UI      |
+| Development   | dev        | dev.vercel.app    | Set in Vercel UI      |
+
+### b. Environment Variable Examples
+
+**In Vercel Dashboard** (for each project):
+
+1. **Production Project**:
+   ```
+   NEXTAUTH_URL=https://app.com
+   DATABASE_URL=mongodb+srv://prod-db
+   NEXT_PUBLIC_ENV=production
+   ```
+
+2. **Staging Project**:
+   ```
+   NEXTAUTH_URL=https://staging.app.com
+   DATABASE_URL=mongodb+srv://stage-db
+   NEXT_PUBLIC_ENV=staging
+   ```
+
+3. **Development Project**:
+   ```
+   NEXTAUTH_URL=https://dev.vercel.app
+   DATABASE_URL=mongodb+srv://dev-db
+   NEXT_PUBLIC_ENV=development
+   ```
+
+### c. Local Development Setup
+
+```bash
+# .env.local
+NEXTAUTH_URL=http://localhost:3000
+DATABASE_URL=mongodb://localhost:27017/localdb
+NEXT_PUBLIC_ENV=local
+```
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

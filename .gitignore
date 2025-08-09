@@ -33,6 +33,14 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+.env.local       # Local development only (never deployed)
+.env.development # Vercel dev deployment (optional)
+.env.staging     # Vercel staging deployment
+.env.production  # Vercel production deployment
+.env.example     # Template (committed to repo)
+
+!.env.example
+
 # vercel
 .vercel
 
