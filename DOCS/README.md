@@ -6,7 +6,9 @@ cd into project directory, and type `code .`
 ![cdCode](/DOCS/PICS/cdCode.png)
 
 [1installYarn.md](/DOCS/1installYarn.md)
+
 [2setUp.md](/DOCS/2setUp.md)
+
 [3ENV.md](/DOCS/3ENV.md)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
