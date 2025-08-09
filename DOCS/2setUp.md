@@ -150,8 +150,8 @@ copy google_client_id and google_client_secret to .env
 
 > Create
 
-yarn fixes Deepseek (mckeen.it)
-2:34:48
+add vercel auth as well (Deepseek)
+2:43:48
 
 # Deployment to Vercel
 ```shell
