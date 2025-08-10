@@ -1,3 +1,30 @@
+## github developer setting OAuth URL
+Branch 'main'
+Homepage URL: https://alifewsl.vercel.app
+Callback URL: https://alifewsl.vercel.app/api/auth/callback/github
+
+Branch 'dev' 
+Homepage URL: http://localhost:3000
+Callback URL: http://localhost:3000/api/auth/callback/github
+
+
+## pages/api/auth/[...nextauth].ts
+const github Auth 'main'
+clientId: process.env.GITHUB_PROD_CLIENT_ID!
+clientSecret: process.env.GITHUB_PROD_CLIENT_SECRET!
+
+const github Auth 'dev'
+clientId: process.env.GITHUB_DEV_CLIENT_ID!
+clientSecret: process.env.GITHUB_DEV_CLIENT_SECRET!
+
+
+## .env.local     
+Branch      |   Vercel Env   |     NEXTAUTH_URL
+'main'      |  (Preview)     | https://alifewsl.vercel.app
+'dev'       |  (Production)  | http://localhost:3000
+
+######################################################
+
 Qn: with dev and branch, each with different .env for git oauth right?  And the paired gitnoauth in vercel is preview for dev, production for main.
 ## Deepseek
 Exactly! You've got the right understanding. Here's the clean, professional way to set this up:

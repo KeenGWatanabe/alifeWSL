@@ -13,20 +13,19 @@ export const authOptions: AuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-      authorization: {
-        params: {
-          redirect_uri: process.env.NEXTAUTH_URL ? `${process.env.NEXTAUTH_URL}/api/auth/callback/google` : "http://localhost:3000/api/auth/callback/google"
-        }
-      }
     }),
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
       clientSecret: process.env.GITHUB_SECRET as string,
       authorization: {
         params: {
-          redirect_uri: process.env.NEXTAUTH_URL ? `${process.env.NEXTAUTH_URL}/api/auth/callback/github` : "http://localhost:3000/api/auth/callback/github"
-        }
-      }
+          scope: 'read:user, user:email',
+        },
+      },
+       profile(profile) {
+      console.log("GitHub Profile:", profile); // 👈 Debug here
+      return { id: profile.id, email: profile.email, image: profile.avatar_url };
+      },
     }),
     CredentialsProvider({
       name: 'credentials',
@@ -63,7 +62,7 @@ export const authOptions: AuthOptions = {
   pages: {
     signIn: '/',
   },
-  debug: process.env.NODE_ENV === 'development',
+  debug: process.env.NODE_ENV === 'production',
   session: {
     strategy: "jwt"
   },
