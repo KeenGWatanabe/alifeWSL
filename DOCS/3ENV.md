@@ -23,6 +23,12 @@ Branch      |   Vercel Env   |     NEXTAUTH_URL
 'main'      |  (Preview)     | https://alifewsl.vercel.app
 'dev'       |  (Production)  | http://localhost:3000
 
+## nextjs env settings
+'main' -> production; 'dev' -> development;
+pages/api/auth[...nextauth].ts -> ln65 
+```bash
+ debug: process.env.NODE_ENV === 'production',
+ ```
 ######################################################
 
 Qn: with dev and branch, each with different .env for git oauth right?  And the paired gitnoauth in vercel is preview for dev, production for main.
