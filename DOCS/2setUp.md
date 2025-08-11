@@ -36,6 +36,7 @@ https://v3.tailwindcss.com/docs/installation (recommended)
 # install tailwindcss
 ```shell (window/WSL)
 yarn add -D tailwindcss@3 postcss autoprefixer
+yarn tailwindcss init -p
 ```
 ```bash (debian)
 npm install -D tailwindcss@3 postcss autoprefixer
@@ -66,11 +67,14 @@ body,
 yarn add react-icons zustand axios react-hook-form react-hot-toast
 ```
 
-# prisma
+# prisma @ 1:51:23
+https://authjs.dev
+https://authjs.dev/getting-started/adapters/prisma
 ```shell (window/WSL)
 yarn add @prisma/client @auth/prisma-adapter
 
 yarn add -D prisma
+yarn prisma init
 ```bash
 npm install -D prisma
 

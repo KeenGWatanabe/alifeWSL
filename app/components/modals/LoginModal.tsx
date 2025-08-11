@@ -20,7 +20,6 @@ import Input from '../inputs/Input';
 import toast from 'react-hot-toast';
 import Button from '../Button';
 //import { routerServerGlobal } from 'next/dist/server/lib/router-utils/router-server-context';
-import { redirect } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 
 const LoginModal = () => {

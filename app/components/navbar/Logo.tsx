@@ -8,13 +8,16 @@ const Logo = () => {
   const router = useRouter();
 
   return (
-  <div className="relative h-[40px] w-[40px]">
-    <Image
-        alt="Logo"
+    <div className="relative h-[40px] w-[120px]">
+      <Image
+       src="/images/logo.png"
+        alt="Your Company Logo"
         fill
-        src="/images/logo.png"
+        priority // Add this for above-the-fold images
+        sizes="(max-width: 768px) 100px, 120px" // Adjusted sizes
         className="object-contain"
-    /> 
+        quality={85} // Optional: optimize quality
+      /> 
     </div> 
   );
 };

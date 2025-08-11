@@ -58,38 +58,15 @@ export const authOptions: AuthOptions = {
         return user;
       }
     })
-  ], // Callbacks start
-  callbacks: {
-    async redirect({ url, baseUrl }) {
-      // Allow relative URLs
-      if (url.startsWith("/")) return `${baseUrl}${url}`
-      // Allow callback URLs on the same origin
-      if (new URL(url).origin === baseUrl) return url
-      return baseUrl
-    }
-  }, // Callbacks end
+  ],
   pages: {
     signIn: '/',
   },
-  debug: process.env.NODE_ENV === 'production',
+  debug: process.env.NODE_ENV === 'development',
   session: {
     strategy: "jwt"
   },
   secret: process.env.NEXTAUTH_SECRET,
-  // Cookies configuration start
-  cookies: {
-    sessionToken: {
-      name: `__Secure-next-auth.session-token`,
-      options: {
-        httpOnly: true,
-        sameSite: 'lax',
-        path: '/',
-        secure: true,
-        domain: '.vercel.app' // Important for Vercel
-      }
-    }
-  }
-  // Cookies configuration end
 };
 
 export default NextAuth(authOptions);
