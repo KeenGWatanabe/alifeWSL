@@ -87,7 +87,7 @@ CHECK: db name: / swim / nextjs
 ```shell
 yarn add @prisma/client (window/WSL)
 yarn add prisma --dev
-npx prisma db push
+yarn prisma db push
 ```
 ```bash
 npm install @prisma/client (debian)
