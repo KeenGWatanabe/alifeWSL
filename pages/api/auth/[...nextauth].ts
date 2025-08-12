@@ -1,7 +1,7 @@
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import NextAuth, { AuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import Github from "next-auth/providers/github";
+import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcryptjs from 'bcryptjs';
 
@@ -14,18 +14,9 @@ export const authOptions: AuthOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
-    Github({
+    GithubProvider({
       clientId: process.env.GITHUB_ID as string,
-      clientSecret: process.env.GITHUB_SECRET as string,
-      authorization: {
-        params: {
-          scope: 'read:user, user:email',
-        },
-      },
-       profile(profile) {
-      console.log("GitHub Profile:", profile); // 👈 Debug here
-      return { id: profile.id, email: profile.email, image: profile.avatar_url };
-      },
+      clientSecret: process.env.GITHUB_SECRET as string,  
     }),
     CredentialsProvider({
       name: 'credentials',
