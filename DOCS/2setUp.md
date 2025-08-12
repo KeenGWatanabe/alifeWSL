@@ -159,7 +159,7 @@ copy google_client_id and google_client_secret to .env
 > Create
 
 add vercel auth as well (Deepseek)
-2:43:48
+2:53:07
 
 # Deployment to Vercel
 ```shell
