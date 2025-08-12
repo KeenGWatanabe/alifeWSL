@@ -123,6 +123,10 @@ npm install -D @types/bcrypt
 ```
 ![mongoUserAPI](/DOCS/PICS/2:09:09mongoUser.png)
 
+For Vercel deployment:
+Set Mongo Atlas whitelist IP address or access from anywhere 0.0.0.0/0
+
+
 
 # github auth
 github settings > Developer settings > 

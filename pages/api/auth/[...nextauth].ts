@@ -50,14 +50,30 @@ export const authOptions: AuthOptions = {
       }
     })
   ],
-  pages: {
-    signIn: '/',
-  },
-  debug: process.env.NODE_ENV === 'development',
   session: {
     strategy: "jwt"
   },
+  pages: {
+    signIn: '/auth/login',
+  },
+   callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+        token.email = user.email;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      if (session.user) {
+        session.user.email = token.email;
+      }
+      return session;
+    },
+  },
+  debug: process.env.NODE_ENV === 'development',
   secret: process.env.NEXTAUTH_SECRET,
+ 
 };
 
 export default NextAuth(authOptions);

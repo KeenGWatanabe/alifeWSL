@@ -29,6 +29,11 @@ pages/api/auth[...nextauth].ts -> ln65
 ```bash
  debug: process.env.NODE_ENV === 'production',
  ```
+
+## Mongo Atlas IP address settings
+For Vercel deployment:
+Set Mongo Atlas whitelist IP address or access from anywhere 0.0.0.0/0 
+
 ######################################################
 
 Qn: with dev and branch, each with different .env for git oauth right?  And the paired gitnoauth in vercel is preview for dev, production for main.
