@@ -1,6 +1,7 @@
 'use client'
 
-import React from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import React, { useCallback } from "react";
 import { IconType } from "react-icons";
 
 interface CategoryBoxProps {
@@ -15,6 +16,12 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
   label,
   selected
 }) => {
+  const router = useRouter();
+  const params = useSearchParams();
+
+  const handleClick = useCallback(() => {
+    router.push(`/?category=${label}`);
+  }, [label, router]);
   return (
     <div 
       className={`

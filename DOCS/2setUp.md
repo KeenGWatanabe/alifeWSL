@@ -117,7 +117,7 @@ npm install prisma --save-dev
 ```shell
 (window/WSL-js provides its own types defn)
 yarn add bcryptjs
-(linux)
+(debian/linux)
 npm install bcrypt
 npm install -D @types/bcrypt
 ```
@@ -158,8 +158,19 @@ copy google_client_id and google_client_secret to .env
 
 > Create
 
+## Query String
+
+```bash
+(window/WSL)
+yarn add query-string
+
+(debian/linux)
+npm install query-string
+```
+
 add vercel auth as well (Deepseek)
-2:53:07
+2:54:07
+
 
 # Deployment to Vercel
 ```shell
