@@ -10,7 +10,8 @@ const Logo = () => {
   return (
     <div className="relative h-[40px] w-[120px]">
       <Image
-       src="/images/logo.png"
+        onClick={() => router.push('/')}
+        src="/images/logo.png"
         alt="Your Company Logo"
         fill
         priority // Add this for above-the-fold images
