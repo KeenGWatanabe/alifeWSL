@@ -158,7 +158,9 @@ yarn add query-string
 (debian/linux)
 npm install query-string
 ```
-add vercel auth as well (Deepseek)
+'dev' works without useSearchParams() which is breaking the deployment.
+'main' will stick with the main course until the end.
+Or when useSearchParams() is resolved #
 3:11:36
 
 # Deployment to Vercel
