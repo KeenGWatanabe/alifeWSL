@@ -10,6 +10,7 @@ const Logo = () => {
   return (
   <div className="relative h-[40px] w-[40px]">
     <Image
+        onClick={() => router.push('/')}
         alt="Logo"
         fill
         src="/images/logo.png"
