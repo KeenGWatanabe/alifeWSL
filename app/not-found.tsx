@@ -1,6 +1,6 @@
 // app/not-found.tsx
-import React from "react";
-import Link from 'next/link';
+
+
 
 export default function NotFound() {
   return (
@@ -10,12 +10,7 @@ export default function NotFound() {
       <p className="text-lg mb-8">
         The page you're looking for doesn't exist or has been moved.
       </p>
-      <Link
-        href="/"
-        className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition-colors"
-      >
-        Go back home
-      </Link>
+     
     </div>
   );
 }
