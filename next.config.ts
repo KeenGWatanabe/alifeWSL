@@ -15,8 +15,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  output: 'standalone',
-  skipTrailingSlashRedirect: true,
+  
 };
 
 export default nextConfig;
