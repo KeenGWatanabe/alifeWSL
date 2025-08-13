@@ -150,8 +150,16 @@ copy google_client_id and google_client_secret to .env
 
 > Create
 
+## Query String 3:11:36
+```bash
+(window/WSL)
+yarn add query-string
+
+(debian/linux)
+npm install query-string
+```
 add vercel auth as well (Deepseek)
-2:43:48
+3:11:36
 
 # Deployment to Vercel
 ```shell
