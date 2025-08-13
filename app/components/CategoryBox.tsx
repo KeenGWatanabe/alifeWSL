@@ -30,7 +30,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
       const updatedQuery: any = {
         ...currentQuery,
         category: label
-      };
+      }
 
       if (params?.get('category') === label) {
         delete updatedQuery.category;
@@ -59,7 +59,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         transition
         cursor-pointer 
         ${selected ? 'border-b-neutral-800' : 'border-transparent'},
-        ${selected ? 'text-neutral-800' : 'text-neutral-500'}
+        ${selected ? 'text-blue-600' : 'text-neutral-400'}
         `}
     >
       <Icon size={26} />

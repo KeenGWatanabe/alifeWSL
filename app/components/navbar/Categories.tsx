@@ -34,7 +34,7 @@ const Categories = () => {
   const category = params?.get('category');
   const pathname = usePathname();
 
-  const isMainPage = pathname === '/' || pathname === undefined;
+  const isMainPage = pathname === '/';
 
   if(!isMainPage) {
     return null;
