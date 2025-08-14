@@ -7,6 +7,13 @@ at Ubuntu terminal:
 cd into project directory, and type `code .`
 ![cdCode](/DOCS/PICS/cdCode.png)
 
+Branching: 
+## git  |    vercel             |     special code setup
+  prod  |  production           |  remove searchUserParams()
+  main  |  production           |  remove searchUserParams()
+  dev   |  preview/development  |  full code as per video
+
+## file location
 loc: /home/rger/nextjs/alifeWSL
 terminal: ubuntu-wsl
 github: https://github.com/KeenGWatanabe/alifeWSL
