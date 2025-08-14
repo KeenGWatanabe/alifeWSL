@@ -42,6 +42,7 @@ https://v3.tailwindcss.com/docs/installation (recommended)
 # install tailwindcss
 ```shell (window/WSL)
 yarn add -D tailwindcss@3 postcss autoprefixer
+yarn tailwindcss init -p
 ```
 ```bash (debian)
 npm install -D tailwindcss@3 postcss autoprefixer
@@ -72,11 +73,14 @@ body,
 yarn add react-icons zustand axios react-hook-form react-hot-toast
 ```
 
-# prisma
+# prisma @ 1:51:23
+https://authjs.dev
+https://authjs.dev/getting-started/adapters/prisma
 ```shell (window/WSL)
 yarn add @prisma/client @auth/prisma-adapter
 
 yarn add -D prisma
+yarn prisma init
 ```bash
 npm install -D prisma
 
@@ -93,7 +97,7 @@ CHECK: db name: / swim / nextjs
 ```shell
 yarn add @prisma/client (window/WSL)
 yarn add prisma --dev
-npx prisma db push
+yarn prisma db push
 ```
 ```bash
 npm install @prisma/client (debian)
@@ -119,11 +123,15 @@ npm install prisma --save-dev
 ```shell
 (window/WSL-js provides its own types defn)
 yarn add bcryptjs
-(linux)
+(debian/linux)
 npm install bcrypt
 npm install -D @types/bcrypt
 ```
 ![mongoUserAPI](/DOCS/PICS/2:09:09mongoUser.png)
+
+For Vercel deployment:
+Set Mongo Atlas whitelist IP address or access from anywhere 0.0.0.0/0
+
 
 
 # github auth
@@ -156,7 +164,8 @@ copy google_client_id and google_client_secret to .env
 
 > Create
 
-## Query String 3:11:36
+## Query String
+
 ```bash
 (window/WSL)
 yarn add query-string
@@ -164,10 +173,9 @@ yarn add query-string
 (debian/linux)
 npm install query-string
 ```
-'dev' works without useSearchParams() which is breaking the deployment.
-'main' will stick with the main course until the end.
-Or when useSearchParams() is resolved #
-3:11:36
+
+add vercel auth as well (Deepseek)
+2:43:48
 
 # Deployment to Vercel
 ```shell
