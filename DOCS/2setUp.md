@@ -1,5 +1,11 @@
 # alifeWSL | wsl | yarn 
 
+Branching: 
+## git  |    vercel             |     special code setup
+  prod  |  production           |  remove searchUserParams()
+  main  |  production           |  remove searchUserParams()
+  dev   |  preview/development  |  full code as per video
+  
 Yarn : Linux, WSL
 Accessing the project follow below steps"
 at Ubuntu terminal:
