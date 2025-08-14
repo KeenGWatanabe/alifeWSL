@@ -7,6 +7,13 @@ at Ubuntu terminal:
 cd into project directory, and type `code .`
 ![cdCode](/DOCS/PICS/cdCode.png)
 
+Branching: 
+## git  |    vercel             |     special code setup
+  prod  |  production           |  remove searchUserParams()
+  main  |  production           |  remove searchUserParams()
+  dev   |  preview/development  |  full code as per video
+
+## file location
 loc: /home/rger/nextjs/alifeWSL
 terminal: ubuntu-wsl
 github: https://github.com/KeenGWatanabe/alifeWSL
@@ -168,9 +175,18 @@ yarn add query-string
 npm install query-string
 ```
 
-add vercel auth as well (Deepseek)
-2:54:07
+## Query String 3:11:36
+```bash
+(window/WSL)
+yarn add query-string
 
+(debian/linux)
+npm install query-string
+```
+'dev' works without useSearchParams() which is breaking the deployment.
+'main' will stick with the main course until the end.
+Or when useSearchParams() is resolved #
+3:11:36
 
 # Deployment to Vercel
 ```shell
