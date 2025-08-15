@@ -9,8 +9,8 @@ cd into project directory, and type `code .`
 
 Branching: 
 ## git  |    vercel             |     special code setup
-  prod  |  production           |  remove searchUserParams()
-  main  |  production           |  remove searchUserParams()
+  prod  |  production           |  remove searchUserParams() fr Categories.tsx, CategoryBox.tsx
+  main  |  production           |  remove searchUserParams() fr Categories.tsx, CategoryBox.tsx
   dev   |  preview/development  |  full code as per video
 
 ## file location
