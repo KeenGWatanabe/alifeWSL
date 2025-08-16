@@ -1,10 +1,13 @@
 # alifeWSL | wsl | yarn 
 
 Branching: 
-## git  |    vercel             |     special code setup
-  prod  |  production           |  remove searchUserParams() for Categories.tsx and CategoryBox.tsx
-  main  |  production           |  remove searchUserParams() for Categories.tsx and CategoryBox.tsx
-  dev   |  preview/development  |  full code as per video
+
+| git    |    vercel             |     special code setup                                            | 
+|--------|-----------------------|-------------------------------------------------------------------|
+|  prod  |  production           |  remove searchUserParams() for Categories.tsx and CategoryBox.tsx |
+|  main  |  production           |  remove searchUserParams() for Categories.tsx and CategoryBox.tsx |
+|  dev   |  preview/development  |  full code as per video                                           |
+|  devt  |  preview/development  |  full code as per video                                           | 
   
 Yarn : Linux, WSL
 Accessing the project follow below steps"
@@ -175,7 +178,7 @@ npm install query-string
 ```
 
 add vercel auth as well (Deepseek)
-3:20:41 rentModal.tsx
+3:30:34 CategoryInput.tsx
 
 
 # Deployment to Vercel
@@ -199,6 +202,6 @@ Add new project;
 Import Git Repository;
 Configure Project;
 copy paste .env to Environment Variables;
-Click Deploy
+Click Deploycode
 
 
