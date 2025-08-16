@@ -175,7 +175,7 @@ npm install query-string
 ```
 
 add vercel auth as well (Deepseek)
-2:54:07
+3:20:41 rentModal.tsx
 
 
 # Deployment to Vercel
