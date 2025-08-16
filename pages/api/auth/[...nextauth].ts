@@ -13,20 +13,10 @@ export const authOptions: AuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-      authorization: {
-        params: {
-          redirect_uri: process.env.NEXTAUTH_URL ? `${process.env.NEXTAUTH_URL}/api/auth/callback/google` : "http://localhost:3000/api/auth/callback/google"
-        }
-      }
     }),
     GithubProvider({
-      clientId: process.env.GITHUB_ID as string,
-      clientSecret: process.env.GITHUB_SECRET as string,
-      authorization: {
-        params: {
-          redirect_uri: process.env.NEXTAUTH_URL ? `${process.env.NEXTAUTH_URL}/api/auth/callback/github` : "http://localhost:3000/api/auth/callback/github"
-        }
-      }
+      clientId: process.env.GITHUB_CLIENT_ID as string,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
     }),
     CredentialsProvider({
       name: 'credentials',
@@ -60,14 +50,30 @@ export const authOptions: AuthOptions = {
       }
     })
   ],
-  pages: {
-    signIn: '/',
-  },
-  debug: process.env.NODE_ENV === 'development',
   session: {
     strategy: "jwt"
   },
+  pages: {
+    signIn: '/auth/login',
+  },
+   callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+        token.email = user.email;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      if (session.user) {
+        session.user.email = token.email;
+      }
+      return session;
+    },
+  },
+  debug: process.env.NODE_ENV === 'development',
   secret: process.env.NEXTAUTH_SECRET,
+ 
 };
 
 export default NextAuth(authOptions);

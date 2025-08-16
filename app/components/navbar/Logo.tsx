@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-
 const Logo = () => {
   const router = useRouter();
 
@@ -12,10 +11,11 @@ const Logo = () => {
     <Image
         onClick={() => router.push('/')}
         alt="Logo"
-        fill
+        className="hidden md:block cursor-pointer"
+        height={40}
+        width={40}
         src="/images/logo.png"
-        className="object-contain"
-    /> 
+      /> 
     </div> 
   );
 };
