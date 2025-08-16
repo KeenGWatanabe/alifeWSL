@@ -2,8 +2,8 @@
 
 Branching: 
 ## git  |    vercel             |     special code setup
-  prod  |  production           |  remove searchUserParams()
-  main  |  production           |  remove searchUserParams()
+  prod  |  production           |  remove searchUserParams() for Categories.tsx and CategoryBox.tsx
+  main  |  production           |  remove searchUserParams() for Categories.tsx and CategoryBox.tsx
   dev   |  preview/development  |  full code as per video
   
 Yarn : Linux, WSL
