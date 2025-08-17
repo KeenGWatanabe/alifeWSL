@@ -221,6 +221,9 @@ Copy
   />
 
 ## Marker issues
+create mode 100644 app/components/Map.tsx
+create mode 100644 app/components/Map/MarkerWrapper.tsx
+create mode 100644 public/images/location.svg
 ```bash
 yarn add file-loader --save-dev
 npm add file-loader --save-dev
