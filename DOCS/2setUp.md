@@ -183,10 +183,12 @@ add vercel auth as well (Deepseek)
 ```bash
 (window/WSL)
 yarn add world-counties
+yard add country-flag-icons
 yarn add react-select
 
 (debian/linux)
 npm install world-countries
+npm install country-flag-icons
 npm install react-select
 ```
 3:53:02 CountrySelect.tsx

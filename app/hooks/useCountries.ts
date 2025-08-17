@@ -1,11 +1,13 @@
 import countries from "world-countries";
 
+
 const formattedCountries = countries.map((country) => ({
   value: country.cca2,
   label: country.name.common,
-  flag: country.flag,
+  flag: country.flag, // Keep as fallback
   latlng: country.latlng,
-  region: country.region
+  region: country.region,
+  icon: country.cca2 // Add this for SVG import reference
 }));
 
 const useCountries = () => {
