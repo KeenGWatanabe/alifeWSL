@@ -186,7 +186,8 @@ npm install query-string
 'dev' works without useSearchParams() which is breaking the deployment.
 'main' will stick with the main course until the end.
 Or when useSearchParams() is resolved #
-3:11:36
+
+3:37:33 CategoryInput.tsx
 
 # Deployment to Vercel
 ```shell
