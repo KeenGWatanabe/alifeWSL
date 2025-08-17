@@ -200,7 +200,35 @@ npm install country-flag-icons
 npm install react-select
 ```
 
-3:53:02 CountrySelect.tsx
+## Map.tsx 3:54:04
+```bash
+(window/WSL)
+yarn add leaflet
+yarn add -D @types/leaflet
+yarn add react-leaflet
+(debian/linux)
+npm install leaflet
+npm install -D @types/leaflet
+npm install react-leaflet
+```
+
+## React Leaflet project
+https://react-leaflet.js.org/
+Copy  
+ <TileLayer
+      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  />
+
+## Marker issues
+create mode 100644 app/components/Map.tsx
+create mode 100644 app/components/Map/MarkerWrapper.tsx
+create mode 100644 public/images/location.svg
+```bash
+yarn add file-loader --save-dev
+npm add file-loader --save-dev
+```
+Map/MarkerWrapper.tsx 3:54:04
 
 # Deployment to Vercel
 ```shell
@@ -224,5 +252,4 @@ Import Git Repository;
 Configure Project;
 copy paste .env to Environment Variables;
 Click Deploy
-
 
