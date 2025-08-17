@@ -1,6 +1,5 @@
 'use client';
 
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import { IconType } from "react-icons";
 
 interface CategoryInputProps {
@@ -19,12 +18,24 @@ const CategoryInput: React.FC<CategoryInputProps> = ({
   return (
     <div
       onClick={() => onClick(label)}
-      className={`flex items-center p-4 border-b-2 transition cursor-pointer ${
-        selected ? "border-blue-500" : "border-transparent"
-      }`}
+      className={`
+        rounded-xl
+        border-2 
+        p-4 
+        flex
+        flex-col
+        gap-3
+        hover:border-black 
+        transition 
+        cursor-pointer 
+        ${selected ? "border-blue-500" : "border-transparent"}
+        ${selected ? "text-blue-500" : "text-neutral-400"}
+        `}
     >
-      <Icon className="h-6 w-6 mr-4" />
-      <span className="font-medium">{label}</span>
+      <Icon size={30} />
+      <div className="font-semibold">
+        {label}
+      </div>
     </div>
   );
 

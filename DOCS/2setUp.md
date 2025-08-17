@@ -178,7 +178,7 @@ npm install query-string
 ```
 
 add vercel auth as well (Deepseek)
-3:30:34 CategoryInput.tsx
+3:37:33 CategoryInput.tsx
 
 
 # Deployment to Vercel

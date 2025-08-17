@@ -58,7 +58,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         hover:text-neutral-800
         transition
         cursor-pointer 
-        ${selected ? 'border-b-neutral-800' : 'border-transparent'},
+        ${selected ? 'border-b-neutral-500' : 'border-transparent'},
         ${selected ? 'text-blue-600' : 'text-neutral-400'}
         `}
     >
