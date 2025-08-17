@@ -1,8 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-  },
+  experimental: {},
   images: {
     remotePatterns: [
       {
@@ -13,9 +12,13 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'tile.openstreetmap.org',
+      },
     ],
   },
-  
 };
+
 
 export default nextConfig;
