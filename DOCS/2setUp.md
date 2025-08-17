@@ -228,6 +228,8 @@ create mode 100644 public/images/location.svg
 yarn add file-loader --save-dev
 npm add file-loader --save-dev
 ```
+
+Map/MarkerWrapper.tsx 3:54:04
 Counter.tsx 4:17:02
 
 
@@ -253,5 +255,4 @@ Import Git Repository;
 Configure Project;
 copy paste .env to Environment Variables;
 Click Deploy
-
 
