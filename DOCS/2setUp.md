@@ -191,10 +191,12 @@ Or when useSearchParams() is resolved #
 ```bash
 (window/WSL)
 yarn add world-counties
+yarn add country-flag-icons
 yarn add react-select
 
 (debian/linux)
 npm install world-countries
+npm install country-flag-icons
 npm install react-select
 ```
 
