@@ -178,8 +178,18 @@ npm install query-string
 ```
 
 add vercel auth as well (Deepseek)
-3:37:33 CategoryInput.tsx
 
+## world-countries 3:41:23, 3:44:33
+```bash
+(window/WSL)
+yarn add world-counties
+yarn add react-select
+
+(debian/linux)
+npm install world-countries
+npm install react-select
+```
+3:53:02 CountrySelect.tsx
 
 # Deployment to Vercel
 ```shell
