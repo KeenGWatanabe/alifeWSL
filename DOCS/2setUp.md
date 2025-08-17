@@ -187,7 +187,18 @@ npm install query-string
 'main' will stick with the main course until the end.
 Or when useSearchParams() is resolved #
 
-3:37:33 CategoryInput.tsx
+## world-countries 3:41:23, 3:44:33
+```bash
+(window/WSL)
+yarn add world-counties
+yarn add react-select
+
+(debian/linux)
+npm install world-countries
+npm install react-select
+```
+
+3:53:02 CountrySelect.tsx
 
 # Deployment to Vercel
 ```shell
