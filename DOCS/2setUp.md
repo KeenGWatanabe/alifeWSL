@@ -229,6 +229,7 @@ yarn add file-loader --save-dev
 npm add file-loader --save-dev
 ```
 Map/MarkerWrapper.tsx 3:54:04
+Counter.tsx 4:17:02
 
 # Deployment to Vercel
 ```shell
