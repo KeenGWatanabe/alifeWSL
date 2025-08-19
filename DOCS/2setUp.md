@@ -1,9 +1,12 @@
 # alifeWSL | wsl | yarn 
 
 Yarn : Linux, WSL
-Accessing the project follow below steps"
-at Ubuntu terminal:
-![UbuntuLTSterminal](/DOCS/PICS/UbuntuLTSterminal.png)
+Accessing the project follow below steps:
+Open VS code, any folder is fine.
+select bash / Ubuntu terminal, or type 'wsl' at powershell terminal,
+you will be at root/home/rger aka ~/
+
+cd ~nextjs/alifeWSL into project directory, and type `code .`
 cd into project directory, and type `code .`
 ![cdCode](/DOCS/PICS/cdCode.png)
 
