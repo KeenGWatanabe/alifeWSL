@@ -6,32 +6,33 @@ Open VS code, any folder is fine.
 select bash / Ubuntu terminal, or type 'wsl' at powershell terminal,
 you will be at root/home/rger aka ~/
 
-cd ~nextjs/alifeWSL into project directory, and type `code .`
-cd into project directory, and type `code .`
-![cdCode](/DOCS/PICS/cdCode.png)
+cd ~nextjs/techupz into project directory, and type `code .`
+
+
 
 Branching: 
-## git  |    vercel             |     special code setup
-  prod  |  production           |  remove searchUserParams() fr Categories.tsx, CategoryBox.tsx
-  main  |  production           |  remove searchUserParams() fr Categories.tsx, CategoryBox.tsx
-  dev   |  preview/development  |  full code as per video
+|## git  |    vercel             |     special code setup                                        |
+|--------|-----------------------|---------------------------------------------------------------|
+|  prod  |  production           |  remove searchUserParams() fr Categories.tsx, CategoryBox.tsx |
+|  main  |  production           |  remove searchUserParams() fr Categories.tsx, CategoryBox.tsx |
+|  dev   |  preview/development  |  full code as per video                                       |
 
 ## file location
-loc: /home/rger/nextjs/alifeWSL
+loc: /home/rger/nextjs/techupz
 terminal: ubuntu-wsl
-github: https://github.com/KeenGWatanabe/alifeWSL
+github: https://github.com/KeenGWatanabe/techupz
 
 
-# initialize project
+# initialize project @ 02:21
 ```shell  (window/WSL)
 npx create-next-app --typescript --use-yarn
 ```
 ```bash
 npx create-next-app --typescript
 ```
-![nextjs setup](/images/nextSetup.png)
+![nextjs setup](/DOCS/PICS/npxNextjsCreate.png)
 
-cd .. >alife_win
+cd .. >techupz
 ```shell (window/WSL)
 yarn dev
 ```
@@ -70,7 +71,7 @@ body,
   height: 100%;
 }
 ```
-# create /app/components folder
+# create /app/components folder @ 09:30
 
 # react-icons
 ```shell (window/WSL)
@@ -90,7 +91,7 @@ npm install -D prisma
 
 npx prisma init
 ```
-![npx prisma init](/alife_wsl/DOCS/PICS/npxPrismaInit.png)
+![yarn prisma init]
 Change postgresql to mongodb
 
 # install prisma.io extension
@@ -99,12 +100,14 @@ CHECK: db name: / swim / nextjs
 
 # prisma db 
 ```shell
-yarn add @prisma/client (window/WSL)
+(window/WSL)
+yarn add @prisma/client 
 yarn add prisma --dev
 yarn prisma db push
 ```
 ```bash
-npm install @prisma/client (debian)
+(debian)
+npm install @prisma/client 
 
 npx prisma db push
 ```
@@ -123,7 +126,7 @@ npm install @prisma/client @auth/prisma-adapter
 npm install prisma --save-dev
 ```
 
-# bcrypt
+# bcrypt @ 2:09:27
 ```shell
 (window/WSL-js provides its own types defn)
 yarn add bcryptjs
@@ -193,7 +196,7 @@ Or when useSearchParams() is resolved #
 ## world-countries 3:41:23, 3:44:33
 ```bash
 (window/WSL)
-yarn add world-counties
+yarn add world-countries
 yarn add country-flag-icons
 yarn add react-select
 
@@ -223,17 +226,24 @@ Copy
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
   />
 
-## Marker issues
+## Marker issues so the follow were added
 create mode 100644 app/components/Map.tsx
 create mode 100644 app/components/Map/MarkerWrapper.tsx
 create mode 100644 public/images/location.svg
 ```bash
+(window/WSL)
 yarn add file-loader --save-dev
+(debian/linux)
 npm add file-loader --save-dev
 ```
 
 Map/MarkerWrapper.tsx 3:54:04
 Counter.tsx 4:17:02
+
+# Cloudinary 4:19:07
+https://cloudinary.com/
+sign up for free, 
+sign up with google (mckeen.it)
 
 
 # Deployment to Vercel
@@ -258,4 +268,3 @@ Import Git Repository;
 Configure Project;
 copy paste .env to Environment Variables;
 Click Deploy
-

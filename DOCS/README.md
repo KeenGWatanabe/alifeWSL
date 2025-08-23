@@ -1,15 +1,28 @@
-# alifeWSL | wsl | yarn 
-Accessing the project follow below steps"
-at Ubuntu terminal:
-![UbuntuLTSterminal](/DOCS/PICS/UbuntuLTSterminal.png)
-cd into project directory, and type `code .`
-![cdCode](/DOCS/PICS/cdCode.png)
-
-[1installYarn.md](/DOCS/1installYarn.md)
-
-[2setUp.md](/DOCS/2setUp.md)
-
-[3ENV.md](/DOCS/3ENV.md)
+Timestamps
+00:00 Intro
+02:21 Environment setup
+09:30 Navbar UI
+34:30 Auth UI
+01:35:20 Register functionality, MongoDB, Prisma setup
+02:09:27 Login functionality
+02:28:04 Social Login (Google and Github)
+02:44:36 Categories UI
+03:11:34 Listing creation step 1 (Category selection)
+03:37:43 Listing creation step 2 (Location selection, Map component, Country autocomplete)
+04:06:40 Listing creation step 3 (Counter components)
+04:17:10 Listing creation step 4 (Image upload, Cloudinary CDN)
+04:32:35 Listing creation step 5 (Description and Price, Listing creation POST route)
+04:49:00 Fetching listings with server components (Listing card component, direct server action)
+05:23:12 Favoriting functionality
+05:39:27 Individual Listing View
+06:16:57 Listing reservation component
+06:42:33 Reservation functionality (routes, logic)
+06:55:05 Trips screen (Loading trips with server component)
+07:10:59 Reservations screen (Loading guest reservations with server component)
+07:33:13 Favorites screen (Loading favorites with server component)
+07:42:35 Properties screen (Loading your listings with server component)
+07:53:39 Filters modal (Assigning various filters, add advanced querying logic to getListings, add loading and error pages)
+08:37:48 Vercel deploy & wrap up
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
@@ -28,81 +41,6 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-### a. Recommended Vercel Project Setup
-
-Create **three separate Vercel projects** linked to the same repo:
-
-| Project       | Git Branch | Domain            | Environment Variables |
-|---------------|------------|-------------------|-----------------------|
-| Production    | main       | app.com           | Set in Vercel UI      |
-| Staging       | staging    | staging.app.com   | Set in Vercel UI      |
-| Development   | dev        | dev.vercel.app    | Set in Vercel UI      |
-
-Yes! Vercel can deploy from **any Git branch**, not just the `main` branch. Here's exactly how to configure it:
-
-### 🔗 **URL Structure Doesn't Matter**
-Vercel only needs the **repository URL** (`https://github.com/user/repo`), not the branch-specific URL (`/tree/dev`). The branch is configured separately.
-
----
-
-### 🛠️ **How to Set Up Multiple Environments**
-| Branch      | Vercel Project Type | Domain Example         |
-|-------------|---------------------|------------------------|
-| `main`      | Production          | `app.com`              |
-| `dev`       | Preview             | `dev-app.vercel.app`   |
-| `feature/*` | Preview             | Unique URL per PR      |
-
----
-
-### ⚡ **Automatic Behavior**
-- Pushing to `dev` → Deploys to `dev-app.vercel.app`  
-- Merging to `main` → Deploys to `main-app.vercel.app` / `app.com` 
-- Every PR gets its own preview URL  
-Update github URL and google cloud uri
----
-
-### 📝 **Key Notes**
-1. **No need for branch URLs** in repo connection  
-2. **All branches are deployable** once repo is connected  
-3. **Preview deployments** are created automatically for non-main branches  
-
----
-
-
-### b. Environment Variable Examples
-
-**In Vercel Dashboard** (for each project):
-
-1. **Production Project**:
-   ```
-   NEXTAUTH_URL=https://app.com
-   DATABASE_URL=mongodb+srv://prod-db
-   NEXT_PUBLIC_ENV=production
-   ```
-
-2. **Staging Project**:
-   ```
-   NEXTAUTH_URL=https://staging.app.com
-   DATABASE_URL=mongodb+srv://stage-db
-   NEXT_PUBLIC_ENV=staging
-   ```
-
-3. **Development Project**:
-   ```
-   NEXTAUTH_URL=https://dev.vercel.app
-   DATABASE_URL=mongodb+srv://dev-db
-   NEXT_PUBLIC_ENV=development
-   ```
-
-### c. Local Development Setup
-
-```bash
-# .env.local
-NEXTAUTH_URL=http://localhost:3000
-DATABASE_URL=mongodb://localhost:27017/localdb
-NEXT_PUBLIC_ENV=local
-```
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
