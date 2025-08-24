@@ -245,8 +245,42 @@ https://cloudinary.com/
 sign up for free, 
 sign up with google (mckeen.it)
 
+# next-cloudinary 4:19:50
+https://next.cloudinary.dev/installation
+1. Installation
+```bash
+(window/WSL)
+yarn add next-cloudinary
+(debian/linux)
+npm install next-cloudinary
+```
+2. Configuration: add .env from cloudinary account
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+<Your Cloud Name> is from your https://cloudinary.com/ account
 
-# Deployment to Vercel
+3. uploadPreset="" 4:27:40
+login cloudinary 
+> settings 
+> Product environment settings 
+> Upload 
+> + Add Upload Preset
+![UploadPresetSettings](/DOCS/PICS/UploadPresetSettings.png)
+> Upload preset name: <anyName>
+> Signing mode: Unsigned
+Update the created preset name in your uploadPreset="<anyName>" ImageUpload.tsx ln28
+![uploadPreset](/DOCS/PICS/uploadPreset.png)
+
+stop at 4:32:23 uploadPresets
+
+
+```bash
+(window/WSL)
+
+(debian/linux)
+
+```
+stop at : :
+# Deployment to Vercel ##############################
 ```shell
 yarn build
   OR
