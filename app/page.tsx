@@ -1,6 +1,40 @@
-export default function Home() {
-  return (
-    <div className="text-rose-500 text-2xl">Hello Tonbo!</div>
-  );
-}
+'use client';
 
+import { title } from "process";
+import Container from "./components/Container";
+import Heading from "./components/Heading";
+import EmptyState from "./components/EmptyState";
+import ClientOnly from "./components/ClientOnly";
+
+export default function Home() {
+  const isEmpty = true;
+
+  if (isEmpty) {
+    return (
+      <ClientOnly>
+        <EmptyState showReset/>
+      </ClientOnly>
+    )
+
+  }
+
+  return (
+    <div>
+      <Container>
+        <div className="
+          pt-24
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          md:grid-cols-3
+          lg:grid-cols-4
+          xl:grid-cols-5
+          2xl:grid-cols-6
+          gap-8
+        ">
+          <div>My future listings</div>
+        </div>
+      </Container>
+    </div>
+    );
+}

@@ -140,7 +140,6 @@ For Vercel deployment:
 Set Mongo Atlas whitelist IP address or access from anywhere 0.0.0.0/0
 
 
-
 # github auth
 github settings > Developer settings > 
 OAuth Apps > New OAuth App > 
@@ -270,7 +269,8 @@ login cloudinary
 Update the created preset name in your uploadPreset="<anyName>" ImageUpload.tsx ln28
 ![uploadPreset](/DOCS/PICS/uploadPreset.png)
 
-stop at 4:32:23 uploadPresets
+stop at 4:56:14 EmptyState.tsx
+fix navbar click icon issue not selected
 
 
 ```bash
