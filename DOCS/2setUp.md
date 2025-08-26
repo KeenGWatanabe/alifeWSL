@@ -269,9 +269,15 @@ login cloudinary
 Update the created preset name in your uploadPreset="<anyName>" ImageUpload.tsx ln28
 ![uploadPreset](/DOCS/PICS/uploadPreset.png)
 
-stop at 4:56:14 EmptyState.tsx
-fix navbar click icon issue not selected
-
+stop at 5:17:20 date-fns
+# Date fns
+```bash
+(window/WSL)
+yarn add date-fns
+(debian/linux)
+npm install date-fns
+```
+stop at : :
 
 ```bash
 (window/WSL)
